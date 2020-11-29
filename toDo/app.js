@@ -1,9 +1,11 @@
 const todoInput = document.querySelector('.todoInput');
 const todoBtn = document.querySelector('.todoBtn');
 const todoList = document.querySelector('.todoList');
+const filterOption = document.querySelector('.filterTodo');
 
 todoBtn.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
+filterOption.addEventListener('click', filterTodo);
 
 
 
@@ -17,6 +19,8 @@ function addTodo(event) {
     newTodo.innerText = todoInput.value;
     newTodo.classList.add('todoItem');
     todoDiv.appendChild(newTodo);
+
+    saveLocalTodos(todoInput.value);
 
     const completedBtn = document.createElement('button');
     completedBtn.innerHTML = '<i class="fas fa-check"></i>';
@@ -40,7 +44,7 @@ function deleteCheck(e) {
     if (item.classList[0] === 'trashBtn') {
         const todo = item.parentElement;
         todo.classList.add("fall");
-        todo.addEventListener('transitionend', function(){
+        todo.addEventListener('transitionend', function () {
             todo.remove();
         })
     }
@@ -49,4 +53,53 @@ function deleteCheck(e) {
         const todo = item.parentElement;
         todo.classList.toggle('completed');
     }
+}
+
+function filterTodo(e) {
+    const todos = todoList.childNodes;
+    todos.forEach(function (todo) {
+        switch (e.target.value) {
+            case "all":
+                todo.style.display = "flex";
+                break;
+            case "completed":
+                if (todo.classList.contains("completed")) {
+                    todo.style.display = "flex";
+                } else {
+                    todo.style.display = "none";
+                }
+                break;
+            case "incomplete":
+                if (!todo.classList.contains("completed")) {
+                    todo.style.display = "flex";
+                } else {
+                    todo.style.display = "none";
+                }
+                break;
+        }
+    });
+
+}
+
+function saveLocalTodos(todo) {
+    let todos;
+    if (localStorage.getItem("todos") === null) {
+        todos = [];
+    } else {
+        todos = JSON.parse(localStorage.getItem("todos"));
+    }
+    todos.push(todo);
+    localStorage.setItem("todos", JSON.stringify(todos));
+}
+
+function getTodos() {
+    let todos;
+    if (localStorage.getItem("todos") === null) {
+        todos = [];
+    } else {
+        todos = JSON.parse(localStorage.getItem("todos"));
+    }
+    todos.forEach(function(todo) {
+        
+    });
 }
