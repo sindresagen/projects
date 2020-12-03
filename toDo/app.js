@@ -3,6 +3,7 @@ const todoBtn = document.querySelector('.todoBtn');
 const todoList = document.querySelector('.todoList');
 const filterOption = document.querySelector('.filterTodo');
 
+document.addEventListener('DOMContentLoaded', getTodos);
 todoBtn.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
 filterOption.addEventListener('click', filterTodo);
@@ -100,6 +101,24 @@ function getTodos() {
         todos = JSON.parse(localStorage.getItem("todos"));
     }
     todos.forEach(function(todo) {
-        
+        const todoDiv = document.createElement('div');
+        todoDiv.classList.add('todo');
+
+        const newTodo = document.createElement('li');
+        newTodo.innerText = todo;
+        newTodo.classList.add('todoItem');
+        todoDiv.appendChild(newTodo);
+
+        const completedBtn = document.createElement('button');
+        completedBtn.innerHTML = '<i class="fas fa-check"></i>';
+        completedBtn.classList.add('completeBtn');
+        todoDiv.appendChild(completedBtn);
+
+        const trashBtn = document.createElement('button');
+        trashBtn.innerHTML = '<i class="fas fa-trash"></i>';
+        trashBtn.classList.add('trashBtn');
+        todoDiv.appendChild(trashBtn);
+
+        todoList.appendChild(todoDiv);
     });
 }
