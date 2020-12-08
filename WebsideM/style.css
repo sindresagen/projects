@@ -1,4 +1,4 @@
-body {
+/* body {
     padding: 0;
     margin: 0;
 }
@@ -11,3 +11,52 @@ body {
     font-family: "Monsterrat" sans-serif;
 }
 
+div.page {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 100px 10fr 40px;
+    grid-template-areas: 'header header'
+                         'menu mainContent'
+                         'footer footer';
+}
+
+div.footer {
+    background-color: darkgray;
+    grid-area: footer;
+}
+
+div.header {
+    /* background-color: crimson; */
+    /* margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 30px;
+    margin-bottom: -20px;
+    grid-area: header;
+}
+
+div.menu {
+    grid-area: menu;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    text-align: center;
+    background-image: linear-gradient(45deg, )
+}
+
+div.mainContent {
+    grid-area: mainContent;
+    margin-top: 20px;
+    margin-right: 30px;
+    text-align: center;
+    padding: 20px;
+    background-image: linear-gradient(120deg, #87CEFA, #20B2AA);
+    color: white;
+    min-height: 100vh;
+    opacity: 0.7;
+}
+
+p {
+    position: relative;
+    color: #ffffff;
+} */ 

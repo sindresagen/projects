@@ -13,6 +13,21 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 /* body {
     background-image: linear-gradient(120deg, #FFFFE0, #FFE4E1)
 } */
+
+.txtBorder {
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.description {
+    float: right;
+}
+
+.descriptionClear {
+    clear: left;
+    
+}
 </style>
 <body class="w3-content" style="max-width:1200px">
 
@@ -53,7 +68,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   
   <!-- Top header -->
   <header class="w3-container w3-xlarge">
-    <p class="w3-left">Home</p>
+    <p class="w3-left">Buy now!</p>
     <p class="w3-right">
       <i class="fa fa-shopping-cart w3-margin-right"></i>
       <i class="fa fa-search"></i>
@@ -61,111 +76,41 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   </header>
 
   <!-- Image header -->
-  <div class="w3-display-container w3-container">
-    <img src="https://p0.pikist.com/photos/207/67/wool-knitting-needles-needle-play-hobby-hand-labor-cat-s-cradle-knit-colorful.jpg" alt="Jeans" style="width:100%">
-    <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
-      <h1 class="w3-jumbo w3-hide-small">New arrivals</h1>
-      <h1 class="w3-hide-large w3-hide-medium">New arrivals</h1>
-      <h1 class="w3-hide-small">COLLECTION 2020</h1>
-      <p><a href="" class="w3-button w3-black w3-padding-large w3-large">SHOP NOW</a></p>
-    </div>
-  </div>
 
+  <div class="w3-display-container w3-container">
+    <div style="width: 47.8vw; height: 40vh;">
+    
+    
+    <!-- <div class="w3-display-topleft w3-text-white" style="padding:24px 48px"> -->
+        <div class="bgimg w3-display-container w3-grayscale-min">
+            <h1 class="w3-hide-small description">Knitted gloves</h1><br/>
+            <h3 class="w3-hide-small descriptionClear">Perfect for those cold winter days!<br/> Made of 100% alpacca wool.</h3>
+            <img src="gloveStart.jpg" style="width:40%">
+            <h1 class="w3-hide-small description"><b>$49.99</b></h1><br/>
+
+            <p class="description"><a href="shoppingCart.html" class="w3-button w3-black w3-padding-large w3-large">ADD TO CART</a></p>
+            </div>
+            
+        </div>
+    </div>
   <div class="w3-container w3-text-grey">
-    <p>Top 8 items</p>
+    <p></p>
   </div>
 
   <!-- Product grid -->
-  <div class="w3-row w3-grayscale">
+  <!-- <div class="w3-row w3-grayscale">
     <div class="w3-col l3 s6">
       <div class="w3-container">
         <div class="w3-display-container">
             <img src="gloveStart.jpg" style="width:100%">
             <span class="w3-tag w3-display-topleft">New</span>
             <div class="w3-display-middle w3-display-hover">
-                <a href="buyGloves.html"><button class="w3-button w3-black">Buy now<i class="fa fa-shopping-cart"></i></button></a>            </div>
-          </div>
-          <p>Gloves<br><b>$49.99</b></p>
-      </div>
-      <div class="w3-container">
-        <div class="w3-display-container">
-            <img src="sockStart.jpg" style="width:100%">
-            <span class="w3-tag w3-display-topleft">New</span>
-            <div class="w3-display-middle w3-display-hover">
               <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
             </div>
           </div>
-          <p>Socks<br><b>$69.99</b></p>
-      </div>
-    </div>
+          <p>Gloves<br><b>$49.99</b></p>
+      </div> -->
 
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <div class="w3-display-container">
-            <img src="gloveStart.jpg" style="width:100%">
-            <span class="w3-tag w3-display-topleft">New</span>
-            <div class="w3-display-middle w3-display-hover">
-                <a href="buyGloves.html"><button class="w3-button w3-black">Buy now<i class="fa fa-shopping-cart"></i></button></a>            </div>
-          </div>
-          <p>Gloves<br><b>$49.99</b></p>
-      </div>
-      <div class="w3-container">
-        <div class="w3-display-container">
-            <img src="sockStart.jpg" style="width:100%">
-            <span class="w3-tag w3-display-topleft">New</span>
-            <div class="w3-display-middle w3-display-hover">
-              <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
-            </div>
-          </div>
-          <p>Socks<br><b>$69.99</b></p>
-      </div>
-    </div>
-
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <div class="w3-display-container">
-            <img src="gloveStart.jpg" style="width:100%">
-            <span class="w3-tag w3-display-topleft">New</span>
-            <div class="w3-display-middle w3-display-hover">
-                <a href="buyGloves.html"><button class="w3-button w3-black">Buy now<i class="fa fa-shopping-cart"></i></button></a>            </div>
-          </div>
-          <p>Gloves<br><b>$49.99</b></p>
-      </div>
-      <div class="w3-container">
-        <div class="w3-display-container">
-            <img src="sockStart.jpg" style="width:100%">
-            <span class="w3-tag w3-display-topleft">New</span>
-            <div class="w3-display-middle w3-display-hover">
-              <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
-            </div>
-          </div>
-          <p>Socks<br><b>$69.99</b></p>
-      </div>
-    </div>
-
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <div class="w3-display-container">
-            <img src="gloveStart.jpg" style="width:100%">
-            <span class="w3-tag w3-display-topleft">New</span>
-            <div class="w3-display-middle w3-display-hover">
-                <a href="buyGloves.html"><button class="w3-button w3-black">Buy now<i class="fa fa-shopping-cart"></i></button></a>
-            </div>
-          </div>
-          <p>Gloves<br><b>$49.99</b></p>
-      </div>
-      <div class="w3-container">
-        <div class="w3-display-container">
-            <img src="sockStart.jpg" style="width:100%">
-            <span class="w3-tag w3-display-topleft">New</span>
-            <div class="w3-display-middle w3-display-hover">
-              <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
-            </div>
-          </div>
-          <p>Socks<br><b>$69.99</b></p>
-      </div>
-    </div>
-  </div>
 
   <!-- Subscribe section -->
   <div class="w3-container w3-dark-grey w3-padding-32">
@@ -255,49 +200,3 @@ function w3_close() {
 
 </body>
 </html>
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-
-   
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="page">
-        <div class="header">
-            <h1 class="center" style="color: white">Something something</h1>
-        </div>
-        <div class="menu">
-            <h3>Navigation</h3>
-            <a href="" class="" style="text-decoration: none;">Home</a><br/>
-            <a href="" class="" style="text-decoration: none;">Products</a><br/>
-            <a href="" class="" style="text-decoration: none;">About</a><br/>
-            <a href="" class="" style="text-decoration: none;">Contact</a><br/>
-        </div>
-        <div class="footer">
-            <p style="color: white; text-align: right;">Copyright © 2020 Sindre Sagen</p>
-        </div>
-        <div class="mainContent">
-            <h2 id="home">Front page</h2>
-            <p>StuffstuffstuffstuffStuffstuffstuffstuffStuffstuffstuffstuffStuffstuffstuffstuffStuffstuffstuffstuffStuffstuffstuffstuffStuffstuffstuffstuffStuffstuffstuffstuff
-                StuffstuffstuffstuffStuffstuffstuffstuffStuffstuffstuffstuffStuffstuffstuffstuffStuffstuffstuffstuffStuffstuffstuffstuffStuffstuffstuffstuffStuffstuffstuffstuff
-                StuffstuffstuffstuffStuffstuffstuffstuffStuffstuffstuffstuffStuffstuffstuffstuffStuffstuffstuffstuffStuffstuffstuffstuffStuffstuffstuffstuffStuffstuffstuffstuff
-            </p>
-        </div>
-    </div>
-    
-
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-</body>
-</html> -->
